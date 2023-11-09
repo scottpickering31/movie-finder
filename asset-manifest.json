@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/movie-finder/static/css/main.ea4330d4.css",
+    "main.js": "/movie-finder/static/js/main.f8d7113e.js",
+    "index.html": "/movie-finder/index.html",
+    "main.ea4330d4.css.map": "/movie-finder/static/css/main.ea4330d4.css.map",
+    "main.f8d7113e.js.map": "/movie-finder/static/js/main.f8d7113e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea4330d4.css",
+    "static/js/main.f8d7113e.js"
+  ]
+}
