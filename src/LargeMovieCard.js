@@ -1,8 +1,7 @@
 import React from "react";
 
 const LargeMovieCard = ({ detailedMovies }) => {
-  const { Released, Plot, Title, Year, Runtime, Poster, Ratings } =
-    detailedMovies;
+  const { Released, Plot, Title, Runtime, Poster } = detailedMovies;
   // Render details of the chosen movie here
   return (
     <div className="detailed-description">
