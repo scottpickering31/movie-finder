@@ -14,10 +14,12 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [detailedMovies, setDetailedMovies] = useState("");
 
+  // Set default entry for first load
   useEffect(() => {
     searchMovies("Harry Potter");
   }, []);
 
+  // Async fetch request for movie card info
   const searchMovies = async (title) => {
     setIsLoading(true);
     const response = await fetch(`${API_URL}&${searchLetter}=${title}`);
@@ -26,21 +28,22 @@ const App = () => {
     setIsLoading(false);
   };
 
+  // Logic to dynamically change URL request information to chosen movie (largemoviecard)
   const movieChoice = async (movie) => {
     setSearchLetter("t");
     setDataObj("");
     setChosenMovie(movie);
 
     setIsLoading(true);
-    // Fetch detailed information for the chosen movie
     const detailedResponse = await fetch(
       `${API_URL}&t=${movie.Title}&plot=full`
     );
     const detailedData = await detailedResponse.json();
     setDetailedMovies(detailedData);
-    console.log(detailedData);
     setIsLoading(false);
   };
+
+  // Logic to reset the search field
 
   const resetSearch = () => {
     setChosenMovie(null);
@@ -62,7 +65,9 @@ const App = () => {
           src="https://raw.githubusercontent.com/gist/adrianhajdin/997a8cdf94234e889fa47be89a4759f1/raw/f13e5a9a0d1e299696aa4a0fe3a0026fa2a387f7/search.svg"
           alt="search"
           onClick={() => {
-            searchMovies(searchTerm) && resetSearch();
+            searchMovies(searchTerm);
+            setSearchTerm("");
+            resetSearch();
           }}
         />
       </div>

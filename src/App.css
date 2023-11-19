@@ -26,7 +26,8 @@ body {
   flex-direction: column;
 }
 
-h1 {
+h1,
+h2 {
   font-size: 3rem;
   letter-spacing: 0.9px;
   background: linear-gradient(
@@ -133,17 +134,37 @@ h1 {
   box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
 }
 
-.detailed-description {
+.large-movie-container {
+  border: 3px solid rgb(176, 124, 124);
+  border-radius: 20px;
   display: flex;
-  height: 100vh;
-  flex-wrap: wrap;
-  justify-content: center;
+  height: 100%;
   align-items: center;
   text-align: center;
+  flex-direction: column;
+  padding: 10px;
 }
 
-.detailed-description > * {
+.large-movie-container > * {
   color: white;
+}
+
+.large-movie-image {
+  margin: 10px;
+}
+
+.released-runtime {
+  margin: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.large-movie-information {
+  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .movie div:nth-of-type(1) {
